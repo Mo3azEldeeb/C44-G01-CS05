@@ -49,7 +49,7 @@ namespace Demo
             #endregion
             #region 2D part 2 using one loop
             //int[,] Marks = new int[2, 4];
-          
+
             //for (int i = 0; i < Marks.Length;)
             //{
             //    bool Isparsed = int.TryParse(Console.ReadLine(), out int studentMarks);
@@ -75,7 +75,23 @@ namespace Demo
             //jaggedArray[1]= new int[] {10,20};
             //jaggedArray[2]= [2,3,4];
             #endregion
+            #region Array method
+            int[] number = { 1, 2, 3, 4, 5, 6, 7, 8,9 };
+            Array.Sort(number);
+            Array.Reverse(number);
+            Array.Clear(number);
+            int[] num2 = new int[4];
+            Array.Copy(number, num2 , 4);
+            Array.ConstrainedCopy(number,1, num2, 1,5);
+            foreach (int item in number) { Console.WriteLine(number); }
+            int[] x = { 1, 2, 3, 4, 5, 8 };
+            x.GetLength(2);
+            
 
+
+
+
+            #endregion
         }
     }
 }
