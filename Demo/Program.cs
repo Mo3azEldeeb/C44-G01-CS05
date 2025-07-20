@@ -21,7 +21,33 @@ namespace Demo
             //   int[] num05 =  [1,2,3];
             #endregion
             #endregion
-
+            #region multi Array
+            #region 2D array
+            //int[,] Marks = new int[2, 5];
+            ////take data from user
+            //for (int i = 0; i < Marks.GetLength(0); i++)
+            //{
+            //    Console.WriteLine($"Grades {i+1}=");
+            //    for (int j = 0; j < Marks.GetLength(1); j++)
+            //    {
+            //        Console.Write($"Subject num{j+1}=");
+            //       bool Isparsed= int.TryParse(Console.ReadLine(), out Marks[i,j]);
+            //        if ( Isparsed )
+            //            j++;
+            //    }
+            //    Console.WriteLine("================");
+            //}
+            //for (int i = 0;i < Marks.GetLength(0); i++)
+            //{
+            //    Console.WriteLine($"Grade{i + 1}");
+            //    for(int j = 0;j < Marks.GetLength(1); j++)
+            //    {
+            //        Console.WriteLine($"mark of sub num {j+1} ={ Marks[i,j]}");
+            //    }
+            //    Console.WriteLine("================");
+            //}
+            #endregion
+            #endregion
         }
     }
 }
