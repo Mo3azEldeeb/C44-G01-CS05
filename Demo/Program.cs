@@ -47,6 +47,27 @@ namespace Demo
             //    Console.WriteLine("================");
             //}
             #endregion
+            #region 2D part 2 using one loop
+            int[,] Marks = new int[2, 4];
+          
+            for (int i = 0; i < Marks.Length;)
+            {
+                bool Isparsed = int.TryParse(Console.ReadLine(), out int studentMarks);
+                if (Isparsed)
+                {
+                    ++i; Marks[i/Marks.GetLength(1), i% Marks.GetLength(1)]= studentMarks;
+                }
+                Console.WriteLine("================");
+            }
+            //print
+            for (int i = 0; i < Marks.Length; i++) 
+            { 
+                Console.WriteLine(Marks[i / Marks.GetLength(1), i % Marks.GetLength(1)]);
+            }
+
+
+            #endregion
+
             #endregion
         }
     }
