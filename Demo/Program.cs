@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Demo
 {
     class programe
@@ -17,6 +18,18 @@ namespace Demo
             int Temp = x;
             x = y;
             y = Temp;
+        }
+        public static int sumArray(int[] array) 
+        {
+            int sum = 0;
+            if (array != null)
+            {
+                for (int i = 0; i < array.Length; i++)
+                {
+                    sum += array[i];
+                }
+            }
+            return sum;
         }
 
         #endregion
@@ -118,13 +131,20 @@ namespace Demo
             #endregion
             #region Function parameter
             // value type
-            int A = 10, B = 5;
-            Console.WriteLine($"A={A}");
-            Console.WriteLine($"B={B}");
-            Swap(ref A,ref B);
-            Console.WriteLine("Ater swap");
-            Console.WriteLine($"A={A}");
-            Console.WriteLine($"B={B}");
+            //int A = 10, B = 5;
+            //Console.WriteLine($"A={A}");
+            //Console.WriteLine($"B={B}");
+            //Swap(ref A,ref B);
+            //Console.WriteLine("Ater swap");
+            //Console.WriteLine($"A={A}");
+            //Console.WriteLine($"B={B}");
+            #endregion
+
+            #region function ref type
+
+            //int[] array = { 1, 2, 3 };
+            //int Result = sumArray(array);   
+            //Console.WriteLine(Result);
             #endregion
 
         }
