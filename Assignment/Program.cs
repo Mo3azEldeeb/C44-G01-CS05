@@ -55,7 +55,26 @@ namespace Assignment
                 }
 
                 return true;
+           }
+        static void MinMaxArray(int[] arr, ref int min, ref int max)
+        {
+            if ( arr.Length == 0)
+            {
+                Console.WriteLine("Array is empty.");
+                return;
             }
+
+            min = arr[0];
+            max = arr[0];
+
+            foreach (int num in arr)
+            {
+                if (num < min)
+                    min = num;
+                if (num > max)
+                    max = num;
+            }
+        }
 
         static void Main(String[] args)
         {
@@ -290,13 +309,33 @@ namespace Assignment
             //Console.WriteLine($"The sum of the digits of the number {num} is: {result}");
             #endregion
             #region Q5
-            Console.Write("Enter a number: ");
-            int num = int.Parse(Console.ReadLine());
+            //Console.Write("Enter a number: ");
+            //int num = int.Parse(Console.ReadLine());
 
-            if (IsPrime(num))
-                Console.WriteLine($"{num} is a prime number.");
-            else
-                Console.WriteLine($"{num} is not a prime number.");
+            //if (IsPrime(num))
+            //    Console.WriteLine($"{num} is a prime number.");
+            //else
+            //    Console.WriteLine($"{num} is not a prime number.");
+            #endregion
+            #region Q6
+            Console.Write("Enter the size of the array: ");
+           bool Isparsed = int .TryParse(Console.ReadLine(), out int size);
+
+            int[] array = new int[size];
+            Console.WriteLine("Enter the array elements:");
+            for (int i = 0; i < size; i++)
+            {
+                Console.Write($"Element[{i}]: ");
+                bool Isparsed01 = int.TryParse(Console.ReadLine(), out  array[i]);
+          
+            }
+
+            int min = 0, max = 0;
+
+            MinMaxArray(array, ref min, ref max);
+
+            Console.WriteLine($"\nMinimum value in the array: {min}");
+            Console.WriteLine($"Maximum value in the array: {max}");
             #endregion
         }
     }
