@@ -3,6 +3,16 @@ namespace Demo
 {
     class programe
     {
+        #region Methods
+        public static void PrintShape(string pattern, int count)
+        {
+            for (int i = 0; i < count; i++) 
+            {
+                Console.WriteLine(pattern);
+            }
+
+        }
+        #endregion
         static void Main(string[] args)
         {
             #region 1D Array
@@ -86,11 +96,18 @@ namespace Demo
             //foreach (int item in number) { Console.WriteLine(number); }
             //int[] x = { 1, 2, 3, 4, 5, 8 };
             //x.GetLength(2);
-            
 
 
 
 
+
+            #endregion
+            #region Functions
+            ////PrintShape();
+            //PrintShape(":)",10); //passing by order
+            //PrintShape(count : 5, pattern : "A"); //passing by name
+            //PrintShape(count: 10);
+            ////  PrintShape(pattern:"/*\"); //invalid {Escape Squense}
             #endregion
 
         }
