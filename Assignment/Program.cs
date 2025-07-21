@@ -21,7 +21,7 @@ namespace Assignment
             //{
             //    Console.Write($"number {i+1}: ");
             //     bool IsParsed02 = int.TryParse(Console.ReadLine(), out arr[i]);
-            
+
             //    sum += arr[i];
             //}
 
@@ -67,6 +67,10 @@ namespace Assignment
             //}
 
             //Console.ReadKey();
+            #endregion
+            #region Q3
+           // Write a program in C# Sharp to count the frequency of each element of an array.
+
             #endregion
         }
     }
