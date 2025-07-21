@@ -12,6 +12,13 @@ namespace Demo
             }
 
         }
+        public static void Swap(ref int x,ref int y) 
+        { 
+            int Temp = x;
+            x = y;
+            y = Temp;
+        }
+
         #endregion
         static void Main(string[] args)
         {
@@ -108,6 +115,16 @@ namespace Demo
             //PrintShape(count : 5, pattern : "A"); //passing by name
             //PrintShape(count: 10);
             ////  PrintShape(pattern:"/*\"); //invalid {Escape Squense}
+            #endregion
+            #region Function parameter
+            // value type
+            int A = 10, B = 5;
+            Console.WriteLine($"A={A}");
+            Console.WriteLine($"B={B}");
+            Swap(ref A,ref B);
+            Console.WriteLine("Ater swap");
+            Console.WriteLine($"A={A}");
+            Console.WriteLine($"B={B}");
             #endregion
 
         }
