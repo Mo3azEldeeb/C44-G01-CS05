@@ -69,8 +69,36 @@ namespace Assignment
             //Console.ReadKey();
             #endregion
             #region Q3
-           // Write a program in C# Sharp to count the frequency of each element of an array.
+            // Write a program in C# Sharp to count the frequency of each element of an array.
 
+            #endregion
+            #region Q4
+            //// Write a program in C# Sharp to find maximum and minimum element in an array
+            //Console.Write("Enter the number of elements in the array: ");
+            //bool Isparsed=int.TryParse(Console.ReadLine(), out  int n);
+
+            //int[] arr = new int[n];
+
+            //Console.WriteLine("Enter the elements of the array:");
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.Write($"Element[{i+1}]: ");
+            //    bool IsParsed = int.TryParse(Console.ReadLine(), out arr[i]); // if string?
+            //}
+
+            //int max = arr[0];
+            //int min = arr[0];
+
+            //for (int i = 1; i < n; i++)
+            //{
+            //    if (arr[i] > max)
+            //        max = arr[i];
+            //    if (arr[i] < min)
+            //        min = arr[i];
+            //}
+
+            //Console.WriteLine($"Maximum element is: {max}");
+            //Console.WriteLine($"Minimum element is: {min}");
             #endregion
         }
     }
