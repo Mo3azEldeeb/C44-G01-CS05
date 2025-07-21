@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 using System.Threading.Channels;
 
 namespace Assignment
@@ -22,7 +23,14 @@ namespace Assignment
                 Sum += Arr[i];
             return Sum;
         }
+        public static int Fun (int num1  , int num2 )
+        {
+           int Sum = num1 + num2;
+          int  sub=num1 - num2;
 
+            return (Sum);
+              
+        }
 
         static void Main(String[] args)
         {
@@ -235,10 +243,20 @@ namespace Assignment
 
             #endregion
             #region FunQ2
-    
+
             // it is the same Question
 
             #endregion
+            #region FunQ3
+            Console.Write("Enter first number  (n1): ");
+            int n1 = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter second number (n2): ");
+            int n2 = int.Parse(Console.ReadLine());
+            int resul = Fun(n1, n2);
+            
+            #endregion
+
         }
     }
 }
