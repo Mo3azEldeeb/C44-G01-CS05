@@ -37,6 +37,18 @@ namespace Demo
              sub =x-y;
         
         }
+        public static int sumArray( params int[] array)
+        {
+            int sum = 0;
+            if (array != null)
+            {
+                for (int i = 0; i < array.Length; i++)
+                {
+                    sum += array[i];
+                }
+            }
+            return sum;
+        }
         #endregion
         static void Main(string[] args)
         {
@@ -171,6 +183,15 @@ namespace Demo
             //Console.WriteLine(sumResult);
             //Console.WriteLine(SubResult);
             #endregion
+            #region params
+            int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int First = 1;
+            int Second = 2;
+            int Third = 3;
+            int Result = sumArray(First,Second, Third);//CLR will convrt it an array
+
+            #endregion
+
         }
     }
 }
