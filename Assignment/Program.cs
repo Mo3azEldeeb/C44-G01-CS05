@@ -216,10 +216,10 @@ namespace Assignment
             //Modifying elements will affect the original array.
             //Won't affect the original reference outside the method.
             // Method have same reference passed, but cannot modify the reference itself
-            int[] Numbers = { 1, 2, 3 };
-            int result = SumArray(Numbers);
-            Console.WriteLine(result); //105
-            Console.WriteLine(Numbers[0]); //100
+            //int[] Numbers = { 1, 2, 3 };
+            //int result = SumArray(Numbers);
+            //Console.WriteLine(result); //105
+            //Console.WriteLine(Numbers[0]); //100
 
 
             // by ref
@@ -227,11 +227,16 @@ namespace Assignment
             //Modifying elements will affect the original array.
             //Will affect the original reference outside the method.
             //Method can changes the reference itself
-            int[] numbers = { 1, 2, 3 };
-            int result01 = SumArray(ref numbers);
-            Console.WriteLine(result01); //105
-            Console.WriteLine(numbers[0]); //100
+            //int[] numbers = { 1, 2, 3 };
+            //int result01 = SumArray(ref numbers);
+            //Console.WriteLine(result01); //105
+            //Console.WriteLine(numbers[0]); //100
 
+
+            #endregion
+            #region FunQ2
+    
+            // it is the same Question
 
             #endregion
         }
