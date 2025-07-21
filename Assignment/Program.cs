@@ -100,6 +100,31 @@ namespace Assignment
             //Console.WriteLine($"Maximum element is: {max}");
             //Console.WriteLine($"Minimum element is: {min}");
             #endregion
+            #region Q5
+            //Console.Write("Enter the number of elements in the array: ");
+            //bool Isparsed = int.TryParse(Console.ReadLine(), out int n);
+
+            //int[] arr = new int[n];
+
+            //Console.WriteLine("Enter the elements of the array:");
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.Write($"Element[{i + 1}]: ");
+            //    bool IsParsed = int.TryParse(Console.ReadLine(), out arr[i]); 
+            //}
+
+            //Array.Sort(arr);
+            //Array.Reverse(arr); 
+
+           
+            //foreach (int num in arr)
+            //{
+            //    Console.Write(num + " ");
+            //}
+
+            //Console.WriteLine($"second largest is: {arr[1]}");
+
+            #endregion
         }
     }
 }
