@@ -1,9 +1,29 @@
 ﻿using System.ComponentModel;
+using System.Threading.Channels;
 
 namespace Assignment
 {
     class Programe
     {
+        public static int SumArray(int[] Arr)
+        {
+            int Sum = 0;
+            Arr[0] = 100;
+            for (int i = 0; i < Arr.Length; i++)
+                Sum += Arr[i];
+            return Sum;
+        }
+
+        public static int SumArray(ref int[] Arr)
+        {
+            int Sum = 0;
+            Arr[0] = 100;
+            for (int i = 0; i < Arr.Length; i++)
+                Sum += Arr[i];
+            return Sum;
+        }
+
+
         static void Main(String[] args)
         {
             ///Arrays
@@ -168,26 +188,51 @@ namespace Assignment
             //}
             #endregion
             #region Q10
-            Console.Write("Enter the number of elements in the array: ");
-            bool Isparsed = int.TryParse(Console.ReadLine(), out int n);
+            //Console.Write("Enter the number of elements in the array: ");
+            //bool Isparsed = int.TryParse(Console.ReadLine(), out int n);
 
-            int[] arr = new int[n];
+            //int[] arr = new int[n];
 
-            Console.WriteLine("Enter the elements of the array:");
-            for (int i = 0; i < n; i++)
-            {
-                Console.Write($"Element[{i + 1}]: ");
-                bool IsParsed = int.TryParse(Console.ReadLine(), out arr[i]);
-            }
+            //Console.WriteLine("Enter the elements of the array:");
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.Write($"Element[{i + 1}]: ");
+            //    bool IsParsed = int.TryParse(Console.ReadLine(), out arr[i]);
+            //}
 
-            Array.Sort(arr);
-            Array.Reverse(arr);
+            //Array.Sort(arr);
+            //Array.Reverse(arr);
 
 
-            foreach (int num in arr)
-            {
-                Console.Write(num + " ");
-            }
+            //foreach (int num in arr)
+            //{
+            //    Console.Write(num + " ");
+            //}
+            #endregion
+            /// Functions
+            #region FunQ1
+            // by value
+            //            Passes a copy of the reference to the array.
+            //Modifying elements will affect the original array.
+            //Won't affect the original reference outside the method.
+            // Method have same reference passed, but cannot modify the reference itself
+            int[] Numbers = { 1, 2, 3 };
+            int result = SumArray(Numbers);
+            Console.WriteLine(result); //105
+            Console.WriteLine(Numbers[0]); //100
+
+
+            // by ref
+            //            Passes the original reference of array
+            //Modifying elements will affect the original array.
+            //Will affect the original reference outside the method.
+            //Method can changes the reference itself
+            int[] numbers = { 1, 2, 3 };
+            int result01 = SumArray(ref numbers);
+            Console.WriteLine(result01); //105
+            Console.WriteLine(numbers[0]); //100
+
+
             #endregion
         }
     }
