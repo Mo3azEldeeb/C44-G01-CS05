@@ -116,7 +116,7 @@ namespace Assignment
             //Array.Sort(arr);
             //Array.Reverse(arr); 
 
-           
+
             //foreach (int num in arr)
             //{
             //    Console.Write(num + " ");
@@ -125,6 +125,48 @@ namespace Assignment
             //Console.WriteLine($"second largest is: {arr[1]}");
 
             #endregion
-        }
+            #region Q6
+
+            #endregion
+            #region Q9
+            Console.Write("Enter number of rows: ");
+            bool Isparsed = int.TryParse(Console.ReadLine(), out int D1);
+
+            Console.Write("Enter number of columns: ");
+            bool Isparsed01 = int.TryParse(Console.ReadLine(), out int D2);
+
+            int[,] firstArray = new int[D1, D2];
+            int[,] secondArray = new int[D1, D2];
+
+            Console.WriteLine("Enter elements for the first array:");
+            for (int i = 0; i < D1; i++)
+            {
+                for (int j = 0; j < D2; j++)
+                {
+                    Console.Write($"Element[{i},{j}]: ");
+                    firstArray[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+
+      
+            for (int i = 0; i < D1; i++)
+            {
+                for (int j = 0; j < D2; j++)
+                {
+                    secondArray[i, j] = firstArray[i, j];
+                }
+            }
+
+            
+            Console.WriteLine("Second array after copying:");
+            for (int i = 0; i < D1; i++)
+            {
+                for (int j = 0; j < D2; j++)
+                {
+                    Console.Write(secondArray[i, j] + " ");
+                }
+            }
+                #endregion
+            }
     }
 }
