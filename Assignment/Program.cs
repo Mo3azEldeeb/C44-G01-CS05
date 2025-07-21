@@ -31,6 +31,18 @@ namespace Assignment
             return (Sum);
               
         }
+        static int SumOfDigits(int number)
+        {
+            int sum = 0;
+            number = Math.Abs(number);
+
+            while (number > 0)
+            {
+                sum += number % 10;
+            }
+
+            return sum;
+        }
 
         static void Main(String[] args)
         {
@@ -254,9 +266,16 @@ namespace Assignment
             Console.Write("Enter second number (n2): ");
             int n2 = int.Parse(Console.ReadLine());
             int resul = Fun(n1, n2);
-            
-            #endregion
 
+            #endregion
+            #region Q4
+            Console.Write("Enter a number: ");
+            int num = int.Parse(Console.ReadLine() ?? "0");
+
+            int result = SumOfDigits(num);
+
+            Console.WriteLine($"The sum of the digits of the number {num} is: {result}");
+            #endregion
         }
     }
 }
