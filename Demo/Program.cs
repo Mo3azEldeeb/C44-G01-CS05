@@ -19,7 +19,7 @@ namespace Demo
             x = y;
             y = Temp;
         }
-        public static int sumArray(int[] array) 
+        public static int sumArray(ref int[] array) 
         {
             int sum = 0;
             if (array != null)
@@ -31,7 +31,12 @@ namespace Demo
             }
             return sum;
         }
-
+        public static void  SumSub(int x, int y ,out int sum , out int sub)
+        {
+             sum = x + y;
+             sub =x-y;
+        
+        }
         #endregion
         static void Main(string[] args)
         {
@@ -146,7 +151,26 @@ namespace Demo
             //int Result = sumArray(array);   
             //Console.WriteLine(Result);
             #endregion
-
+            #region EX02
+            /// by value type
+            //int[] numbers = { 1, 2, 3 };
+            //Console.WriteLine(numbers[0]);//1
+            //int result = sumArray(numbers);
+            //Console.WriteLine(result);
+            //Console.WriteLine(numbers[0]);//1
+            /// by ref
+            //int[] numbers = { 1, 2, 3 };
+            //Console.WriteLine(numbers[0]);//1
+            //int result = sumArray(ref numbers);
+            //Console.WriteLine(result);
+            //Console.WriteLine(numbers[0]);
+            #endregion
+            #region by out
+            //int a = 10, b = 20, sumResult, SubResult;
+            //SumSub( a, b ,out  sumResult, out SubResult );
+            //Console.WriteLine(sumResult);
+            //Console.WriteLine(SubResult);
+            #endregion
         }
     }
 }
