@@ -129,44 +129,66 @@ namespace Assignment
 
             #endregion
             #region Q9
-            Console.Write("Enter number of rows: ");
-            bool Isparsed = int.TryParse(Console.ReadLine(), out int D1);
+            //Console.Write("Enter number of rows: ");
+            //bool Isparsed = int.TryParse(Console.ReadLine(), out int D1);
 
-            Console.Write("Enter number of columns: ");
-            bool Isparsed01 = int.TryParse(Console.ReadLine(), out int D2);
+            //Console.Write("Enter number of columns: ");
+            //bool Isparsed01 = int.TryParse(Console.ReadLine(), out int D2);
 
-            int[,] firstArray = new int[D1, D2];
-            int[,] secondArray = new int[D1, D2];
+            //int[,] firstArray = new int[D1, D2];
+            //int[,] secondArray = new int[D1, D2];
 
-            Console.WriteLine("Enter elements for the first array:");
-            for (int i = 0; i < D1; i++)
+            //Console.WriteLine("Enter elements for the first array:");
+            //for (int i = 0; i < D1; i++)
+            //{
+            //    for (int j = 0; j < D2; j++)
+            //    {
+            //        Console.Write($"Element[{i},{j}]: ");
+            //        firstArray[i, j] = int.Parse(Console.ReadLine());
+            //    }
+            //}
+
+
+            //for (int i = 0; i < D1; i++)
+            //{
+            //    for (int j = 0; j < D2; j++)
+            //    {
+            //        secondArray[i, j] = firstArray[i, j];
+            //    }
+            //}
+
+
+            //Console.WriteLine("Second array after copying:");
+            //for (int i = 0; i < D1; i++)
+            //{
+            //    for (int j = 0; j < D2; j++)
+            //    {
+            //        Console.Write(secondArray[i, j] + " ");
+            //    }
+            //}
+            #endregion
+            #region Q10
+            Console.Write("Enter the number of elements in the array: ");
+            bool Isparsed = int.TryParse(Console.ReadLine(), out int n);
+
+            int[] arr = new int[n];
+
+            Console.WriteLine("Enter the elements of the array:");
+            for (int i = 0; i < n; i++)
             {
-                for (int j = 0; j < D2; j++)
-                {
-                    Console.Write($"Element[{i},{j}]: ");
-                    firstArray[i, j] = int.Parse(Console.ReadLine());
-                }
+                Console.Write($"Element[{i + 1}]: ");
+                bool IsParsed = int.TryParse(Console.ReadLine(), out arr[i]);
             }
 
-      
-            for (int i = 0; i < D1; i++)
-            {
-                for (int j = 0; j < D2; j++)
-                {
-                    secondArray[i, j] = firstArray[i, j];
-                }
-            }
+            Array.Sort(arr);
+            Array.Reverse(arr);
 
-            
-            Console.WriteLine("Second array after copying:");
-            for (int i = 0; i < D1; i++)
+
+            foreach (int num in arr)
             {
-                for (int j = 0; j < D2; j++)
-                {
-                    Console.Write(secondArray[i, j] + " ");
-                }
+                Console.Write(num + " ");
             }
-                #endregion
-            }
+            #endregion
+        }
     }
 }
